@@ -121,12 +121,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &699558365 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4549132994405461993, guid: 4b67376a1f6a5284299b0852b89e094c,
-    type: 3}
-  m_PrefabInstance: {fileID: 599503427511595090}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &599503427511595090
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -194,6 +188,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 862954398632507213, guid: 4b67376a1f6a5284299b0852b89e094c,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 862954398632507213, guid: 4b67376a1f6a5284299b0852b89e094c,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 862954398632507213, guid: 4b67376a1f6a5284299b0852b89e094c,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474623866505769274, guid: 4b67376a1f6a5284299b0852b89e094c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2947738569834413943, guid: 4b67376a1f6a5284299b0852b89e094c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.046905518
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254278016134071984, guid: 4b67376a1f6a5284299b0852b89e094c,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254278016134071984, guid: 4b67376a1f6a5284299b0852b89e094c,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254278016134071984, guid: 4b67376a1f6a5284299b0852b89e094c,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5314540089113142044, guid: 4b67376a1f6a5284299b0852b89e094c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -209,21 +243,35 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7062938648436444744, guid: 4b67376a1f6a5284299b0852b89e094c,
+    - target: {fileID: 6070717573399843140, guid: 4b67376a1f6a5284299b0852b89e094c,
         type: 3}
-      propertyPath: shootPoint
-      value: 
-      objectReference: {fileID: 699558365}
-    - target: {fileID: 7062938648436444744, guid: 4b67376a1f6a5284299b0852b89e094c,
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6070717573399843140, guid: 4b67376a1f6a5284299b0852b89e094c,
         type: 3}
-      propertyPath: projectilePrefab
-      value: 
-      objectReference: {fileID: 5174406500543182939, guid: 85cf3caf0ac10404687a4d2d9b2c1aa5,
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235899495790844216, guid: 4b67376a1f6a5284299b0852b89e094c,
         type: 3}
-    - target: {fileID: 7062938648436444744, guid: 4b67376a1f6a5284299b0852b89e094c,
+      propertyPath: m_Name
+      value: HP Display
+      objectReference: {fileID: 0}
+    - target: {fileID: 6851658523817192085, guid: 4b67376a1f6a5284299b0852b89e094c,
         type: 3}
-      propertyPath: fireRate
-      value: 0.3
+      propertyPath: m_MaxValue
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 9149443734429678964, guid: 4b67376a1f6a5284299b0852b89e094c,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9149443734429678964, guid: 4b67376a1f6a5284299b0852b89e094c,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b67376a1f6a5284299b0852b89e094c, type: 3}

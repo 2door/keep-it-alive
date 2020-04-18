@@ -11,7 +11,6 @@ public class PlayerMovement : MonoBehaviour {
     private Vector2 movement;
     private Vector2 mousePos;
 
-    // Update is called once per frame
     void Update() {
         movement = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
