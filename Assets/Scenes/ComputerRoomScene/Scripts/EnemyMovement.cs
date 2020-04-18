@@ -9,18 +9,27 @@ public class EnemyMovement : MonoBehaviour {
     public float minDistance;
     public float computerAttackRate;
     public GameEvent computerAttackEvent;
+    public GameEvent gameOverEvent;
 
     private bool moveLock = true;
     private bool computerAttackLock = true;
     private bool atDestination = false;
+    private bool gameOver = false;
+
+    void Start() {
+        GameEventListener gameOverListener = (GameEventListener) ScriptableObject.CreateInstance("GameEventListener");
+        gameOverListener.SetupListener(gameOverEvent, GameOver);
+    }
 
     void FixedUpdate() {
-        if (moveLock && !atDestination) {
-            StartCoroutine(Move());
-        }
+        if (!gameOver) {
+            if (moveLock && !atDestination) {
+                StartCoroutine(Move());
+            }
 
-        if (computerAttackLock && atDestination) {
-            StartCoroutine(AttackComputer());
+            if (computerAttackLock && atDestination) {
+                StartCoroutine(AttackComputer());
+            }
         }
     }
 
@@ -43,5 +52,9 @@ public class EnemyMovement : MonoBehaviour {
         computerAttackEvent.Raise();
         yield return new WaitForSeconds(computerAttackRate);
         computerAttackLock = true;
+    }
+
+    private void GameOver() {
+        gameOver = true;
     }
 }

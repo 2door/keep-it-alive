@@ -7,6 +7,7 @@ public class ComputerHealthController : MonoBehaviour {
     public int enemyAttackDamage;
     public GameObject healthBar;
     public GameEvent computerAttackEvent;
+    public GameEvent gameOverEvent;
 
     private int hp;
     private GameEventListener computerAttackListener;
@@ -15,15 +16,16 @@ public class ComputerHealthController : MonoBehaviour {
         hp = maxHealth;
         healthBar.GetComponent<Slider>().value = hp;
 
-        computerAttackListener = (GameEventListener) ScriptableObject.CreateInstance("GameEventListener");
+        GameEventListener computerAttackListener = (GameEventListener) ScriptableObject.CreateInstance("GameEventListener");
         computerAttackListener.SetupListener(computerAttackEvent, TakeDamage);
     }
 
     private void TakeDamage() {
         hp -= enemyAttackDamage;
         if (hp <= 0) {
-            // TODO Issue game over event
+            // TODO Explode computer
             Debug.Log("Computer Dead");
+            gameOverEvent.Raise();
         }
 
         healthBar.GetComponent<Slider>().value = hp;

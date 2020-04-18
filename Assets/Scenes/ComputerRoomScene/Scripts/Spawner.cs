@@ -11,12 +11,17 @@ public class Spawner : MonoBehaviour{
     public float spawnRate;
     public GameObject enemySpawnPrefab;
     public GameObject enemyPrefab;
+    public GameEvent gameOverEvent;
 
     private GameObject[] spawners;
     private bool spawnLock = true;
+    private bool gameOver = false;
 
     // Start is called before the first frame update
     void Start() {
+        GameEventListener gameOverListener = (GameEventListener) ScriptableObject.CreateInstance("GameEventListener");
+        gameOverListener.SetupListener(gameOverEvent, GameOver);
+
         spawners = new GameObject[4];
         spawners[0] = Instantiate(enemySpawnPrefab, new Vector2(left, top), Quaternion.identity);
         spawners[1] = Instantiate(enemySpawnPrefab, new Vector2(right, top), Quaternion.identity);
@@ -26,7 +31,7 @@ public class Spawner : MonoBehaviour{
 
     // Update is called once per frame
     void Update() {
-        if (spawnLock) {
+        if (spawnLock && !gameOver) {
             StartCoroutine(Spawn());
         }
     }
@@ -39,5 +44,9 @@ public class Spawner : MonoBehaviour{
         }
         yield return new WaitForSeconds(spawnRate);
         spawnLock = true;
+    }
+
+    private void GameOver() {
+        gameOver = true;
     }
 }

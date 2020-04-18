@@ -64,3 +64,4 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   computerAttackEvent: {fileID: 11400000, guid: e871925a9f7acd14e86f9a9910014f14,
     type: 2}
+  gameOverEvent: {fileID: 11400000, guid: 0c9ae705dd0bdf747bc6c66ae034c47f, type: 2}

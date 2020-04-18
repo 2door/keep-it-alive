@@ -4,19 +4,25 @@ using UnityEngine;
 
 public class BulletBehavior : MonoBehaviour {
 
-    public Rigidbody2D rb;
     public float range;
+    public Rigidbody2D rb;
+    public GameEvent gameOverEvent;
 
+    private bool gameOver = false;
     private Vector2 startPoint;
 
     void Start() {
         startPoint = rb.position;
+        GameEventListener gameOverListener = (GameEventListener) ScriptableObject.CreateInstance("GameEventListener");
+        gameOverListener.SetupListener(gameOverEvent, GameOver);
     }
 
     void FixedUpdate() {
-        Vector2 pos = rb.position;
-        if (Vector2.Distance(startPoint, pos) >= range) {
-            Hit();
+        if (!gameOver) {
+            Vector2 pos = rb.position;
+            if (Vector2.Distance(startPoint, pos) >= range) {
+                Hit();
+            }
         }
     }
 
@@ -30,5 +36,10 @@ public class BulletBehavior : MonoBehaviour {
         if (!collision.gameObject.CompareTag("Player")) {
             Hit();
         }
+    }
+
+    private void GameOver() {
+        gameOver = true;
+        gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
     }
 }

@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour {
 
-    public GameObject projectilePrefab;
-    public Transform shootPoint;
     public float projectileSpeed;
     public float fireRate;
+    public GameObject projectilePrefab;
+    public Transform shootPoint;
+    public GameEvent gameOverEvent;
 
     private bool shootLock = true;
+    private bool gameOver = false;
+
+    void Start() {
+        GameEventListener gameOverListener = (GameEventListener) ScriptableObject.CreateInstance("GameEventListener");
+        gameOverListener.SetupListener(gameOverEvent, GameOver);
+    }
 
     void Update() {
-        if (Input.GetMouseButton(0) && shootLock) {
+        if (Input.GetMouseButton(0) && shootLock && !gameOver) {
             StartCoroutine(Shoot());
         }
     }
@@ -24,5 +31,9 @@ public class PlayerShooting : MonoBehaviour {
 
         yield return new WaitForSeconds(fireRate);
         shootLock = true;
+    }
+
+    private void GameOver() {
+        gameOver = true;
     }
 }
