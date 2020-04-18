@@ -26,4 +26,10 @@ public class BulletBehavior : MonoBehaviour {
         // Place for any animations and destroys when bullet hits
         Destroy(gameObject);
     }
+
+    void OnCollisionEnter2D(Collision2D collision) {
+        if (!collision.gameObject.CompareTag("Player")) {
+            Hit();
+        }
+    }
 }
