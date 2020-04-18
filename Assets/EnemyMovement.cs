@@ -3,13 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour {
-    // Start is called before the first frame update
-    void Start() {
-        
-    }
+
+    public float speed;
+    public float walkRate;
+
+    private bool moveLock = true;
 
     // Update is called once per frame
-    void Update() {
-        
+    void FixedUpdate() {
+        if (moveLock) {
+            StartCoroutine(Move());
+        }
+    }
+
+    private IEnumerator Move() {
+        moveLock = false;
+        transform.position = Vector2.MoveTowards(transform.position, new Vector2(0, 0), speed);
+        yield return new WaitForSeconds(walkRate);
+        moveLock = true;
     }
 }

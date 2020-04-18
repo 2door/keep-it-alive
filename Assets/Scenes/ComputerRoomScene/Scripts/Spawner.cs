@@ -34,7 +34,8 @@ public class Spawner : MonoBehaviour{
     private IEnumerator Spawn() {
         spawnLock = false;
         foreach (GameObject spawnerInstance in spawners) {
-            Instantiate(enemyPrefab, spawnerInstance.transform.position, Quaternion.identity);
+            Vector3 randomness = new Vector3(Random.Range(0f, 2f), Random.Range(0f, 2f), 0f);
+            Instantiate(enemyPrefab, spawnerInstance.transform.position + randomness, Quaternion.identity);
         }
         yield return new WaitForSeconds(spawnRate);
         spawnLock = true;

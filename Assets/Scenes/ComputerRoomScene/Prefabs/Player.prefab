@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 601bb2c6515f80c4c86a04260cd44d60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 9
   rb: {fileID: 3372935572401694233}
   mainCam: {fileID: 0}
 --- !u!114 &3751726725984860348
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e104d6e25026ddf4ab9a2c23492b6062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 5174406500543182939, guid: 85cf3caf0ac10404687a4d2d9b2c1aa5,
-    type: 3}
+  projectilePrefab: {fileID: 0}
+  shootPoint: {fileID: 0}
   projectileSpeed: 20
   fireRate: 1
