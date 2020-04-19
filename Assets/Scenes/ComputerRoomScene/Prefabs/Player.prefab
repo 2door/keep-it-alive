@@ -309,7 +309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  enemyDamage: 5
+  enemyDamage: 10
   invulnerabilityTime: 1
   gameOverEvent: {fileID: 11400000, guid: 0c9ae705dd0bdf747bc6c66ae034c47f, type: 2}
   hpDisplay: {fileID: 0}
