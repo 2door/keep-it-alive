@@ -5,6 +5,7 @@ public class ScoreController : MonoBehaviour
 {
     public int enemyPointValue;
     public GameObject scoreDisplay;
+    public GameObject gameOverScore;
     public GameEvent enemyDeathEvent;
 
     private int score;
@@ -20,5 +21,6 @@ public class ScoreController : MonoBehaviour
     private void IncreaseScore() {
         score += enemyPointValue;
         scoreDisplay.GetComponent<Text>().text = $"Score: {(int) score}";
+        gameOverScore.GetComponent<Text>().text = $"Score: {(int) score}";
     }
 }

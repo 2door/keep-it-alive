@@ -206,6 +206,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 434036947812495324, guid: 4b67376a1f6a5284299b0852b89e094c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 434036947812495324, guid: 4b67376a1f6a5284299b0852b89e094c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 599503426503992017, guid: 4b67376a1f6a5284299b0852b89e094c,
         type: 3}
       propertyPath: m_Name
@@ -264,6 +274,16 @@ PrefabInstance:
     - target: {fileID: 599503426503992022, guid: 4b67376a1f6a5284299b0852b89e094c,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 625182441521273639, guid: 4b67376a1f6a5284299b0852b89e094c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 625182441521273639, guid: 4b67376a1f6a5284299b0852b89e094c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 862954398632507213, guid: 4b67376a1f6a5284299b0852b89e094c,
@@ -336,11 +356,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3595557499231847111, guid: 4b67376a1f6a5284299b0852b89e094c,
-        type: 3}
-      propertyPath: m_Value
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 4237748878048917782, guid: 4b67376a1f6a5284299b0852b89e094c,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -380,6 +395,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4700624478255454926, guid: 4b67376a1f6a5284299b0852b89e094c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4889083747340300002, guid: 4b67376a1f6a5284299b0852b89e094c,
         type: 3}
@@ -470,6 +490,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Reason Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 8815462906505561220, guid: 4b67376a1f6a5284299b0852b89e094c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8829005567473342824, guid: 4b67376a1f6a5284299b0852b89e094c,
         type: 3}

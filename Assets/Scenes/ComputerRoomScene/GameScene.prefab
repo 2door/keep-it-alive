@@ -141,11 +141,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2579716693449857422, guid: 03433b7ad0aeace4e83e1b2fb14ffb4b,
         type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2579716693449857422, guid: 03433b7ad0aeace4e83e1b2fb14ffb4b,
-        type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
@@ -204,6 +199,11 @@ PrefabInstance:
       propertyPath: scoreDisplay
       value: 
       objectReference: {fileID: 2985771698616740489}
+    - target: {fileID: 5311086042844066145, guid: d879f080044d8c64782e0a3ead7d2639,
+        type: 3}
+      propertyPath: gameOverScore
+      value: 
+      objectReference: {fileID: 5735583175826413418}
     - target: {fileID: 6522418242942805260, guid: d879f080044d8c64782e0a3ead7d2639,
         type: 3}
       propertyPath: healthBar
@@ -479,11 +479,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6041431635222047782, guid: 7460769c6ea37a949aa4c90440d8b9a4,
-        type: 3}
-      propertyPath: m_Value
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 6412286151803607031, guid: 7460769c6ea37a949aa4c90440d8b9a4,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -583,6 +578,12 @@ GameObject:
 --- !u!1 &756472796466165812 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7515679222864533205, guid: 7460769c6ea37a949aa4c90440d8b9a4,
+    type: 3}
+  m_PrefabInstance: {fileID: 7075865775566974689}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5735583175826413418 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3290553444163942795, guid: 7460769c6ea37a949aa4c90440d8b9a4,
     type: 3}
   m_PrefabInstance: {fileID: 7075865775566974689}
   m_PrefabAsset: {fileID: 0}
