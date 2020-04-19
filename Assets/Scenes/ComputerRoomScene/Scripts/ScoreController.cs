@@ -7,6 +7,7 @@ public class ScoreController : MonoBehaviour
     public GameObject scoreDisplay;
     public GameObject gameOverScore;
     public GameEvent enemyDeathEvent;
+    public AudioSource deathAudio;
 
     private int score;
     private GameEventListener enemyDeathListener;
@@ -22,5 +23,7 @@ public class ScoreController : MonoBehaviour
         score += enemyPointValue;
         scoreDisplay.GetComponent<Text>().text = $"Score: {(int) score}";
         gameOverScore.GetComponent<Text>().text = $"Score: {(int) score}";
+
+        deathAudio.PlayOneShot(deathAudio.clip);
     }
 }

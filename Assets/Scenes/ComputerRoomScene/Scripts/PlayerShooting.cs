@@ -9,6 +9,7 @@ public class PlayerShooting : MonoBehaviour {
     public GameObject projectilePrefab;
     public Transform shootPoint;
     public GameEvent gameOverEvent;
+    public AudioSource shootAudio;
 
     private bool shootLock = true;
     private bool gameOver = false;
@@ -28,6 +29,8 @@ public class PlayerShooting : MonoBehaviour {
         shootLock = false;
         GameObject projectileInstance = Instantiate(projectilePrefab, shootPoint.position, shootPoint.rotation);
         projectileInstance.GetComponent<Rigidbody2D>().AddForce(shootPoint.up * projectileSpeed, ForceMode2D.Impulse);
+
+        shootAudio.PlayOneShot(shootAudio.clip);
 
         yield return new WaitForSeconds(fireRate);
         shootLock = true;

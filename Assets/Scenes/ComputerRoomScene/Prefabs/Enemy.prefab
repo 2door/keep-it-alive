@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3325596973208447721}
   - component: {fileID: 3408001401208855570}
   - component: {fileID: -5446841362272662977}
+  - component: {fileID: 6329909153159397837}
   - component: {fileID: 7742759916515513532}
   - component: {fileID: 4200772730281312366}
-  - component: {fileID: 6329909153159397837}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -133,6 +133,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!95 &6329909153159397837
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8963966732431262151}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e230467896999bf4c9f2b023127cf209, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &7742759916515513532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,22 +185,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathEvent: {fileID: 11400000, guid: 5b4c5376c26ec0746ae0e56d77266863, type: 2}
---- !u!95 &6329909153159397837
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8963966732431262151}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e230467896999bf4c9f2b023127cf209, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
