@@ -199,6 +199,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af964fb02b1cda54dae64e09af1bc3c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1792763017 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 599503426503992017, guid: 4b67376a1f6a5284299b0852b89e094c,
+    type: 3}
+  m_PrefabInstance: {fileID: 599503427511595090}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1792763019
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792763017}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 10f5af4feae714f4f91cfd8f08c730e9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &599503427511595090
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -310,6 +335,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2632224579808265237, guid: 4b67376a1f6a5284299b0852b89e094c,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2899646985999258011, guid: 4b67376a1f6a5284299b0852b89e094c,
         type: 3}
@@ -485,6 +515,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: The computer was destroyed!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081288021051719800, guid: 4b67376a1f6a5284299b0852b89e094c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.27
       objectReference: {fileID: 0}
     - target: {fileID: 8188929754425255624, guid: 4b67376a1f6a5284299b0852b89e094c,
         type: 3}

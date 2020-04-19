@@ -10,15 +10,21 @@ public class EnemyMovement : MonoBehaviour {
     public float computerAttackRate;
     public GameEvent computerAttackEvent;
     public GameEvent gameOverEvent;
+    public Animator enemyAnimator;
 
     private bool moveLock = true;
     private bool computerAttackLock = true;
     private bool atDestination = false;
     private bool gameOver = false;
+    private Rigidbody2D rb;
 
     void Start() {
+        enemyAnimator.SetBool("Walk", true);
+
         GameEventListener gameOverListener = (GameEventListener) ScriptableObject.CreateInstance("GameEventListener");
         gameOverListener.SetupListener(gameOverEvent, GameOver);
+
+        rb = gameObject.GetComponent<Rigidbody2D>();
     }
 
     void FixedUpdate() {
@@ -28,6 +34,8 @@ public class EnemyMovement : MonoBehaviour {
             }
 
             if (computerAttackLock && atDestination) {
+                enemyAnimator.SetBool("Walk", false);
+                enemyAnimator.SetBool("Attack", true);
                 StartCoroutine(AttackComputer());
             }
         }
@@ -45,6 +53,10 @@ public class EnemyMovement : MonoBehaviour {
 
         yield return new WaitForSeconds(walkRate);
         moveLock = true;
+
+        Vector2 shootDirection = new Vector2(.0f, .0f) - rb.position;
+        float shootAngle = (Mathf.Atan2(shootDirection.y, shootDirection.x) * Mathf.Rad2Deg) - 90.0f;
+        rb.rotation = shootAngle;
     }
 
     private IEnumerator AttackComputer() {

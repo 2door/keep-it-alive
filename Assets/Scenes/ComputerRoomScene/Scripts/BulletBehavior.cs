@@ -7,6 +7,7 @@ public class BulletBehavior : MonoBehaviour {
     public float range;
     public Rigidbody2D rb;
     public GameEvent gameOverEvent;
+    public Animator projectileAnimator;
 
     private bool gameOver = false;
     private Vector2 startPoint;
@@ -28,8 +29,9 @@ public class BulletBehavior : MonoBehaviour {
 
     private void Hit() {
         // Place for any animations and destroys when bullet hits
-        // TODO Add effect for bullet hit
-        Destroy(gameObject);
+        gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
+        projectileAnimator.SetBool("Hit", true);
+        Destroy(gameObject, 0.25f);
     }
 
     void OnCollisionEnter2D(Collision2D collision) {
