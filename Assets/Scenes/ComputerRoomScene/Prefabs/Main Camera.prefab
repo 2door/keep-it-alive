@@ -674,7 +674,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 90}
-  m_SizeDelta: {x: 342.78, y: 30}
+  m_SizeDelta: {x: 353.38, y: 71.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6143157529394552618
 CanvasRenderer:
@@ -715,7 +715,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: The computer was destroyed!
+  m_Text: You were overrun and the computer was destroyed...
 --- !u!1 &5430516398968554600
 GameObject:
   m_ObjectHideFlags: 0
