@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerDamage : MonoBehaviour {
 
@@ -8,6 +9,7 @@ public class PlayerDamage : MonoBehaviour {
     public int enemyDamage;
     public float invulnerabilityTime;
     public GameEvent gameOverEvent;
+    public GameObject hpDisplay;
 
     private int hp;
     private bool damageLock = true;
@@ -27,16 +29,16 @@ public class PlayerDamage : MonoBehaviour {
 
     private IEnumerator TakeDamage() {
         damageLock = false;
-
         hp -= enemyDamage;
         if (hp <= 0) {
             hp = 0;
             gameOverEvent.Raise();
         }
 
+        hpDisplay.GetComponent<Slider>().value = hp;
+
         // TODO Visual damage que
         yield return new WaitForSeconds(invulnerabilityTime);
-
         damageLock = true;
     }
 

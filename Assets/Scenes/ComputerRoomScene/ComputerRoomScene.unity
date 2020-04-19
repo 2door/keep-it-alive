@@ -411,6 +411,26 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5344520236604506219, guid: 4b67376a1f6a5284299b0852b89e094c,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5344520236604506219, guid: 4b67376a1f6a5284299b0852b89e094c,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5344520236604506219, guid: 4b67376a1f6a5284299b0852b89e094c,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5701669337630432395, guid: 4b67376a1f6a5284299b0852b89e094c,
+        type: 3}
+      propertyPath: m_Value
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 6070717573399843140, guid: 4b67376a1f6a5284299b0852b89e094c,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -425,6 +445,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HP Display
+      objectReference: {fileID: 0}
+    - target: {fileID: 6278633482741626328, guid: 4b67376a1f6a5284299b0852b89e094c,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6278633482741626328, guid: 4b67376a1f6a5284299b0852b89e094c,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6851658523817192085, guid: 4b67376a1f6a5284299b0852b89e094c,
         type: 3}
