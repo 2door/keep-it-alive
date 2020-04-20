@@ -28,6 +28,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3676280303747007281}
+  - {fileID: 7949314202612701714}
   - {fileID: 7121720140652306808}
   - {fileID: 6723969805169330573}
   - {fileID: 5084258143319801390}
@@ -117,6 +118,76 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &8155250164874887977
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7949314202612701714}
+  - component: {fileID: 1130092004630684180}
+  m_Layer: 0
+  m_Name: Map Limit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7949314202612701714
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8155250164874887977}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 599503426503992022}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!68 &1130092004630684180
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8155250164874887977}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -7.98769, y: -3.0470405}
+  - {x: -8.452958, y: -0.8043955}
+  - {x: -8.358868, y: 1.4742355}
+  - {x: -7.714955, y: 3.6156147}
+  - {x: -6.2224555, y: 5.7723746}
+  - {x: -4.32599, y: 7.334531}
+  - {x: -2.006162, y: 8.257399}
+  - {x: 0.40096712, y: 8.434021}
+  - {x: 2.5765429, y: 8.096243}
+  - {x: 4.647492, y: 7.079542}
+  - {x: 6.474839, y: 5.421255}
+  - {x: 7.7590356, y: 3.48014}
+  - {x: 8.3675995, y: 1.0050423}
+  - {x: 8.19828, y: -1.8899548}
+  - {x: 7.1560707, y: -4.5790577}
+  - {x: 4.6950474, y: -7.01152}
+  - {x: 2.226424, y: -8.090099}
+  - {x: -0.3073274, y: -8.320041}
+  - {x: -1.6339781, y: -8.169343}
+  - {x: -3.2820435, y: -7.691907}
+  - {x: -4.8475943, y: -6.8412375}
+  - {x: -6.659376, y: -5.2065697}
+  - {x: -8.001158, y: -2.9289703}
 --- !u!1001 &525642308528332187
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -162,7 +233,7 @@ PrefabInstance:
     - target: {fileID: 2579716693449857422, guid: 03433b7ad0aeace4e83e1b2fb14ffb4b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03433b7ad0aeace4e83e1b2fb14ffb4b, type: 3}
@@ -222,7 +293,7 @@ PrefabInstance:
     - target: {fileID: 8503593618174345305, guid: d879f080044d8c64782e0a3ead7d2639,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8503593618174345305, guid: d879f080044d8c64782e0a3ead7d2639,
         type: 3}
@@ -262,7 +333,7 @@ PrefabInstance:
     - target: {fileID: 3801381612882974604, guid: e7ecdbbb540bf0c4b84f3a75bf5f1998,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3801381612882974607, guid: e7ecdbbb540bf0c4b84f3a75bf5f1998,
         type: 3}
@@ -327,7 +398,7 @@ PrefabInstance:
     - target: {fileID: 99985401873777963, guid: 7f983b61d173a294e968ba7eede926c0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 99985401873777963, guid: 7f983b61d173a294e968ba7eede926c0,
         type: 3}
@@ -367,7 +438,7 @@ PrefabInstance:
     - target: {fileID: 548710623457852811, guid: 7460769c6ea37a949aa4c90440d8b9a4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1780166121852417929, guid: 7460769c6ea37a949aa4c90440d8b9a4,
         type: 3}
