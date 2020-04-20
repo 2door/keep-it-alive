@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4167e08dfc3e890458b7ed61e0f801ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPointValue: 10
+  enemyPointValue: 5
   scoreDisplay: {fileID: 0}
   gameOverScore: {fileID: 0}
   enemyDeathEvent: {fileID: 11400000, guid: 5b4c5376c26ec0746ae0e56d77266863, type: 2}
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 200
-  enemyAttackDamage: 1
+  enemyAttackDamage: 5
   healthBar: {fileID: 0}
   computerAttackEvent: {fileID: 11400000, guid: e871925a9f7acd14e86f9a9910014f14,
     type: 2}

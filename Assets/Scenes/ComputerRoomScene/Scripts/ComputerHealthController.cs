@@ -24,7 +24,6 @@ public class ComputerHealthController : MonoBehaviour {
         hp -= enemyAttackDamage;
         if (hp <= 0) {
             // TODO Explode computer
-            Debug.Log("Computer Dead");
             gameOverEvent.Raise();
         }
 

@@ -47,7 +47,9 @@ MonoBehaviour:
   bot: -8.3
   right: 9.2
   left: -9.2
-  spawnRate: 2.3
+  spawnRate: 0.5
+  minRadius: 12
+  maxRadius: 13
   enemySpawnPrefab: {fileID: 3323847291510734949, guid: 60bde7ff551f1ad42bdf8c463b4f4041,
     type: 3}
   enemyPrefab: {fileID: 8963966732431262151, guid: 523b3534857c5ef47b9b45034cc6b975,
