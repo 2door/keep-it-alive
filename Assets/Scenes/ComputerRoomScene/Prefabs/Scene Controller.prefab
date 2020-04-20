@@ -43,3 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af964fb02b1cda54dae64e09af1bc3c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseEvent: {fileID: 11400000, guid: 2a6343942483b1942bf2fe6dba5f0ba5, type: 2}
+  unpauseEvent: {fileID: 11400000, guid: 3ad73c445e0171b4bbf9bffe01f84e28, type: 2}

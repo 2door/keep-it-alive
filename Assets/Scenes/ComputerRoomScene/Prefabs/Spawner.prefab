@@ -55,3 +55,6 @@ MonoBehaviour:
   enemyPrefab: {fileID: 8963966732431262151, guid: 523b3534857c5ef47b9b45034cc6b975,
     type: 3}
   gameOverEvent: {fileID: 11400000, guid: 0c9ae705dd0bdf747bc6c66ae034c47f, type: 2}
+  pauseEvent: {fileID: 11400000, guid: 2a6343942483b1942bf2fe6dba5f0ba5, type: 2}
+  unpauseEvent: {fileID: 11400000, guid: 3ad73c445e0171b4bbf9bffe01f84e28, type: 2}
+  paused: 0

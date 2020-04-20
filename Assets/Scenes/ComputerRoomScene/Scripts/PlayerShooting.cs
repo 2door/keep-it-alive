@@ -9,18 +9,25 @@ public class PlayerShooting : MonoBehaviour {
     public GameObject projectilePrefab;
     public Transform shootPoint;
     public GameEvent gameOverEvent;
+    public GameEvent pauseEvent;
+    public GameEvent unpauseEvent;
     public AudioSource shootAudio;
 
     private bool shootLock = true;
     private bool gameOver = false;
+    public bool paused = false;
 
     void Start() {
         GameEventListener gameOverListener = (GameEventListener) ScriptableObject.CreateInstance("GameEventListener");
         gameOverListener.SetupListener(gameOverEvent, GameOver);
+        GameEventListener pauseEventListener = (GameEventListener) ScriptableObject.CreateInstance("GameEventListener");
+        pauseEventListener.SetupListener(pauseEvent, Pause);
+        GameEventListener unpauseEventListener = (GameEventListener) ScriptableObject.CreateInstance("GameEventListener");
+        unpauseEventListener.SetupListener(unpauseEvent, Unpause);
     }
 
     void Update() {
-        if (Input.GetMouseButton(0) && shootLock && !gameOver) {
+        if (Input.GetMouseButton(0) && shootLock && !gameOver && !paused) {
             StartCoroutine(Shoot());
         }
     }
@@ -38,5 +45,13 @@ public class PlayerShooting : MonoBehaviour {
 
     private void GameOver() {
         gameOver = true;
+    }
+
+    private void Pause() {
+        paused = true;
+    }
+
+    private void Unpause() {
+        paused = false;
     }
 }

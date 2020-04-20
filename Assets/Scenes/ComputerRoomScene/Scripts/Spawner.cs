@@ -14,36 +14,33 @@ public class Spawner : MonoBehaviour{
     public GameObject enemySpawnPrefab;
     public GameObject enemyPrefab;
     public GameEvent gameOverEvent;
+    public GameEvent pauseEvent;
+    public GameEvent unpauseEvent;
 
     private GameObject[] spawners;
     private bool spawnLock = true;
     private bool gameOver = false;
+    public bool paused = false;
 
     // Start is called before the first frame update
     void Start() {
         GameEventListener gameOverListener = (GameEventListener) ScriptableObject.CreateInstance("GameEventListener");
         gameOverListener.SetupListener(gameOverEvent, GameOver);
-
-        spawners = new GameObject[4];
-        spawners[0] = Instantiate(enemySpawnPrefab, new Vector2(left, top), Quaternion.identity);
-        spawners[1] = Instantiate(enemySpawnPrefab, new Vector2(right, top), Quaternion.identity);
-        spawners[2] = Instantiate(enemySpawnPrefab, new Vector2(left, bot), Quaternion.identity);
-        spawners[3] = Instantiate(enemySpawnPrefab, new Vector2(right, bot), Quaternion.identity);
+        GameEventListener pauseEventListener = (GameEventListener) ScriptableObject.CreateInstance("GameEventListener");
+        pauseEventListener.SetupListener(pauseEvent, Pause);
+        GameEventListener unpauseEventListener = (GameEventListener) ScriptableObject.CreateInstance("GameEventListener");
+        unpauseEventListener.SetupListener(unpauseEvent, Unpause);
     }
 
     // Update is called once per frame
     void Update() {
-        if (spawnLock && !gameOver) {
+        if (spawnLock && !gameOver && !paused) {
             StartCoroutine(Spawn());
         }
     }
 
     private IEnumerator Spawn() {
         spawnLock = false;
-        // foreach (GameObject spawnerInstance in spawners) {
-        //     Vector3 randomness = new Vector3(Random.Range(0f, 2f), Random.Range(0f, 2f), 0f);
-        //     Instantiate(enemyPrefab, spawnerInstance.transform.position + randomness, Quaternion.identity);
-        // }
 
         //Pick a random direction.
         Vector3 direction = Vector3.zero;
@@ -66,5 +63,13 @@ public class Spawner : MonoBehaviour{
 
     private void GameOver() {
         gameOver = true;
+    }
+
+    private void Pause() {
+        paused = true;
+    }
+
+    private void Unpause() {
+        paused = false;
     }
 }

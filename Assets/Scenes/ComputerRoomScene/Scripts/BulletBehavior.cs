@@ -7,20 +7,27 @@ public class BulletBehavior : MonoBehaviour {
     public float range;
     public Rigidbody2D rb;
     public GameEvent gameOverEvent;
+    public GameEvent pauseEvent;
+    public GameEvent unpauseEvent;
     public Animator projectileAnimator;
     public AudioSource hitAudio;
 
     private bool gameOver = false;
+    private bool paused = false;
     private Vector2 startPoint;
 
     void Start() {
         startPoint = rb.position;
         GameEventListener gameOverListener = (GameEventListener) ScriptableObject.CreateInstance("GameEventListener");
         gameOverListener.SetupListener(gameOverEvent, GameOver);
+        GameEventListener pauseEventListener = (GameEventListener) ScriptableObject.CreateInstance("GameEventListener");
+        pauseEventListener.SetupListener(pauseEvent, Pause);
+        GameEventListener unpauseEventListener = (GameEventListener) ScriptableObject.CreateInstance("GameEventListener");
+        unpauseEventListener.SetupListener(unpauseEvent, Unpause);
     }
 
     void FixedUpdate() {
-        if (!gameOver) {
+        if (!gameOver && !paused) {
             Vector2 pos = rb.position;
             if (Vector2.Distance(startPoint, pos) >= range) {
                 Hit();
@@ -46,5 +53,13 @@ public class BulletBehavior : MonoBehaviour {
     private void GameOver() {
         gameOver = true;
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
+    }
+
+    private void Pause() {
+        paused = true;
+    }
+
+    private void Unpause() {
+        paused = false;
     }
 }

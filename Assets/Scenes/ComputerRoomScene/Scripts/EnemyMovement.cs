@@ -10,12 +10,15 @@ public class EnemyMovement : MonoBehaviour {
     public float computerAttackRate;
     public GameEvent computerAttackEvent;
     public GameEvent gameOverEvent;
+    public GameEvent pauseEvent;
+    public GameEvent unpauseEvent;
     public Animator enemyAnimator;
 
     private bool moveLock = true;
     private bool computerAttackLock = true;
     private bool atDestination = false;
     private bool gameOver = false;
+    private bool paused = false;
     private Rigidbody2D rb;
 
     void Start() {
@@ -23,12 +26,16 @@ public class EnemyMovement : MonoBehaviour {
 
         GameEventListener gameOverListener = (GameEventListener) ScriptableObject.CreateInstance("GameEventListener");
         gameOverListener.SetupListener(gameOverEvent, GameOver);
+        GameEventListener pauseEventListener = (GameEventListener) ScriptableObject.CreateInstance("GameEventListener");
+        pauseEventListener.SetupListener(pauseEvent, Pause);
+        GameEventListener unpauseEventListener = (GameEventListener) ScriptableObject.CreateInstance("GameEventListener");
+        unpauseEventListener.SetupListener(unpauseEvent, Unpause);
 
         rb = gameObject.GetComponent<Rigidbody2D>();
     }
 
     void FixedUpdate() {
-        if (!gameOver) {
+        if (!gameOver && !paused) {
             if (moveLock && !atDestination) {
                 StartCoroutine(Move());
             }
@@ -68,5 +75,13 @@ public class EnemyMovement : MonoBehaviour {
 
     private void GameOver() {
         gameOver = true;
+    }
+
+    private void Pause() {
+        paused = true;
+    }
+
+    private void Unpause() {
+        paused = false;
     }
 }
